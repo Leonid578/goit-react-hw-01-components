@@ -7,7 +7,7 @@ const StatisticList = ({ data, title }) => {
 
   return (
     <section className={styles.statistics}>
-      {title  && <h2 className="title">{title}</h2>}
+      {title && <h2 className="title">{title}</h2>}
       <ul className={styles.statisticsBox}>
         {data.map(elem => {
           return (
