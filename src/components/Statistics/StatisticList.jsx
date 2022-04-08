@@ -1,18 +1,13 @@
 import styles from './StatisticList.module.css';
 import Statistica from 'components/Statistica/Statistica';
 import propTypes from 'prop-types';
+import randCol from '../../helpers/helpers'
 
 const StatisticList = ({ data, title }) => {
-  function randCol() {
-    let r =
-      '#' +
-      (Math.random().toString(16) + '000000').substring(2, 8).toUpperCase() +
-      '80';
-    return r;
-  }
+
   return (
     <section className={styles.statistics}>
-      {title !== '' && <h2 className="title">{title}</h2>}
+      {title  && <h2 className="title">{title}</h2>}
       <ul className={styles.statisticsBox}>
         {data.map(elem => {
           return (
